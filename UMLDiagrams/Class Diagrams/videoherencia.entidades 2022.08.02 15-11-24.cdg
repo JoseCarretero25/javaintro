@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="videoherencia.entidades">
+  <ClassDiagramComponents>
+    <Class name="Hotel3" package="videoherencia.entidades" visibility="public" xPosition="594.0" yPosition="426.0">
+      <Fields>
+        <Field name="bar" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="precio"/>
+          <Argument type="double" name="superficie"/>
+          <Argument type="Integer" name="cantidadhabitaciones"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Hotel2" package="videoherencia.entidades" visibility="public" xPosition="109.0" yPosition="235.0">
+      <Fields>
+        <Field name="cajadeseguridad" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="precio"/>
+          <Argument type="double" name="superficie"/>
+          <Argument type="Integer" name="cantidadhabitaciones"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Hotel5" package="videoherencia.entidades" visibility="public" xPosition="594.0" yPosition="581.0">
+      <Fields>
+        <Field name="casino" type="boolean" visibility="protected"/>
+        <Field name="restaurante" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="precio"/>
+          <Argument type="double" name="superficie"/>
+          <Argument type="Integer" name="cantidadhabitaciones"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Hotel" package="videoherencia.entidades" visibility="public" xPosition="425.0" yPosition="20.0">
+      <Fields>
+        <Field name="cantidadhabitaciones" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="cantidadhabitaciones"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCantidadhabitaciones" returnType="Integer" visibility="public"/>
+        <Method name="setCantidadhabitaciones" returnType="void" visibility="public">
+          <Argument type="Integer" name="cantidadhabitaciones"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Hotel4" package="videoherencia.entidades" visibility="public" xPosition="109.0" yPosition="500.0">
+      <Fields>
+        <Field name="minibar" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="precio"/>
+          <Argument type="double" name="superficie"/>
+          <Argument type="Integer" name="cantidadhabitaciones"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Hotel1" package="videoherencia.entidades" visibility="public" xPosition="717.0" yPosition="222.0">
+      <Fields>
+        <Field name="precio" type="double" visibility="protected"/>
+        <Field name="superficie" type="double" visibility="protected"/>
+        <Field name="banio" type="boolean" visibility="protected"/>
+        <Field name="ascensor" type="boolean" visibility="protected"/>
+        <Field name="calefaccion" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="precio"/>
+          <Argument type="double" name="superficie"/>
+          <Argument type="Integer" name="cantidadhabitaciones"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="videoherencia.entidades.Hotel5" target="videoherencia.entidades.Hotel4"/>
+    <IsRelation name="is" source="videoherencia.entidades.Hotel2" target="videoherencia.entidades.Hotel1"/>
+    <IsRelation name="is" source="videoherencia.entidades.Hotel4" target="videoherencia.entidades.Hotel3"/>
+    <IsRelation name="is" source="videoherencia.entidades.Hotel1" target="videoherencia.entidades.Hotel"/>
+    <IsRelation name="is" source="videoherencia.entidades.Hotel3" target="videoherencia.entidades.Hotel2"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

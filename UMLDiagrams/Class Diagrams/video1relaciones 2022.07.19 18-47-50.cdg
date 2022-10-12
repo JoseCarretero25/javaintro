@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="video1relaciones">
+  <ClassDiagramComponents>
+    <Enum name="sexoaminal" package="video1relaciones.enumeraciones" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Literals>
+        <Literal name="MACHO"/>
+        <Literal name="HEMBRA"/>
+      </Literals>
+    </Enum>
+    <Enum name="SexoUsuario" package="video1relaciones.enumeraciones" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Literals>
+        <Literal name="HOMBRE"/>
+        <Literal name="MUJER"/>
+        <Literal name="OTRO"/>
+      </Literals>
+    </Enum>
+    <Enum name="raza" package="video1relaciones.enumeraciones" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Literals>
+        <Literal name="PITBULL"/>
+        <Literal name="CANICHE"/>
+        <Literal name="LABRADOR"/>
+        <Literal name="PASTOR_ALEMAN"/>
+      </Literals>
+    </Enum>
+    <Class name="Video1relaciones" package="video1relaciones" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ServicioMascotas" package="video1relaciones.servicio" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="crearM" returnType="Mascotas" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ServicioUsuario" package="video1relaciones.servicio" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="u" type="Usuarios" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="CrearUsuario" returnType="Usuarios" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Usuarios" package="video1relaciones.entidades" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="Nombre" type="String" visibility="private"/>
+        <Field name="Apellido" type="String" visibility="private"/>
+        <Field name="DNI" type="long" visibility="private"/>
+        <Field name="sexo" type="SexoUsuario" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="Nombre"/>
+          <Argument type="String" name="Apellido"/>
+          <Argument type="long" name="DNI"/>
+          <Argument type="SexoUsuario" name="sexo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="Nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="Apellido"/>
+        </Method>
+        <Method name="getDNI" returnType="long" visibility="public"/>
+        <Method name="setDNI" returnType="void" visibility="public">
+          <Argument type="long" name="DNI"/>
+        </Method>
+        <Method name="getSexo" returnType="SexoUsuario" visibility="public"/>
+        <Method name="setSexo" returnType="void" visibility="public">
+          <Argument type="SexoUsuario" name="sexo"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Mascotas" package="video1relaciones.entidades" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="Nombre" type="String" visibility="private"/>
+        <Field name="Raza" type="raza" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="sex" type="sexoaminal" visibility="private"/>
+        <Field name="razas" type="T" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="Nombre"/>
+          <Argument type="raza" name="Raza"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="sexoaminal" name="sex"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="Nombre"/>
+          <Argument type="raza" name="Raza"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="sexoaminal" name="sex"/>
+          <Argument type="T" name="razas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="Nombre"/>
+        </Method>
+        <Method name="getRaza" returnType="raza" visibility="public"/>
+        <Method name="setRaza" returnType="void" visibility="public">
+          <Argument type="raza" name="Raza"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="getSex" returnType="sexoaminal" visibility="public"/>
+        <Method name="setSex" returnType="void" visibility="public">
+          <Argument type="sexoaminal" name="sex"/>
+        </Method>
+        <Method name="getRazas" returnType="T" visibility="public"/>
+        <Method name="setRaza" returnType="void" visibility="public">
+          <Argument type="T" name="raza"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="sexo" source="video1relaciones.entidades.Usuarios" target="video1relaciones.enumeraciones.SexoUsuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="u" source="video1relaciones.servicio.ServicioUsuario" target="video1relaciones.entidades.Usuarios" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="video1relaciones.servicio.ServicioMascotas" target="video1relaciones.entidades.Mascotas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="video1relaciones.entidades.Usuarios" target="video1relaciones.enumeraciones.SexoUsuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="video1relaciones.entidades.Mascotas" target="video1relaciones.enumeraciones.raza" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="video1relaciones.entidades.Mascotas" target="video1relaciones.enumeraciones.sexoaminal" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="video1relaciones.servicio.ServicioUsuario" target="video1relaciones.entidades.Usuarios" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sex" source="video1relaciones.entidades.Mascotas" target="video1relaciones.enumeraciones.sexoaminal" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Raza" source="video1relaciones.entidades.Mascotas" target="video1relaciones.enumeraciones.raza" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="video1relaciones.entidades">
+  <ClassDiagramComponents>
+    <Class name="Usuarios" package="video1relaciones.entidades" visibility="public" xPosition="91.0" yPosition="113.0">
+      <Fields>
+        <Field name="Nombre" type="String" visibility="private"/>
+        <Field name="Apellido" type="String" visibility="private"/>
+        <Field name="DNI" type="long" visibility="private"/>
+        <Field name="sexo" type="SexoUsuario" visibility="private"/>
+        <Field name="mascotas" type="ArrayList&lt;Mascotas&gt;" visibility="private"/>
+        <Field name="mascotafavorita" type="Mascotas" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="Nombre"/>
+          <Argument type="String" name="Apellido"/>
+          <Argument type="long" name="DNI"/>
+          <Argument type="SexoUsuario" name="sexo"/>
+          <Argument type="ArrayList&lt;Mascotas&gt;" name="mascotas"/>
+          <Argument type="Mascotas" name="mascotafavorita"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMascotafavorita" returnType="Mascotas" visibility="public"/>
+        <Method name="setMascotafavorita" returnType="void" visibility="public">
+          <Argument type="Mascotas" name="mascotafavorita"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="Nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="Apellido"/>
+        </Method>
+        <Method name="getDNI" returnType="long" visibility="public"/>
+        <Method name="setDNI" returnType="void" visibility="public">
+          <Argument type="long" name="DNI"/>
+        </Method>
+        <Method name="getSexo" returnType="SexoUsuario" visibility="public"/>
+        <Method name="setSexo" returnType="void" visibility="public">
+          <Argument type="SexoUsuario" name="sexo"/>
+        </Method>
+        <Method name="getMascotas" returnType="ArrayList&lt;Mascotas&gt;" visibility="public"/>
+        <Method name="setMascotas" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Mascotas&gt;" name="mascotas"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Mascotas" package="video1relaciones.entidades" visibility="public" xPosition="287.0" yPosition="703.0">
+      <Fields>
+        <Field name="Nombre" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="Nombre"/>
+          <Argument type="int" name="edad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="Nombre"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="mascotas" source="video1relaciones.entidades.Usuarios" target="video1relaciones.entidades.Mascotas" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Mascotas&gt;"/>
+    <UseRelation source="video1relaciones.entidades.Usuarios" target="video1relaciones.entidades.Mascotas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mascotafavorita" source="video1relaciones.entidades.Usuarios" target="video1relaciones.entidades.Mascotas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

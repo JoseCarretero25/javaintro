@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="video1relaciones.entidades">
+  <ClassDiagramComponents>
+    <Class name="Usuarios" package="video1relaciones.entidades" visibility="public" xPosition="692.0" yPosition="119.0">
+      <Fields>
+        <Field name="untitledField" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Mascotas" package="video1relaciones.entidades" visibility="public" xPosition="63.0" yPosition="177.0">
+      <Fields>
+        <Field name="untitledField" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
